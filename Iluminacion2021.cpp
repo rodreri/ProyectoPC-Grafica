@@ -52,12 +52,11 @@ Texture dadoTexture;
 Texture pisoTexture;
 Texture Tagave;
 
-//__________________________________________________AQUI DECLARO VARIABLES MODELOS
-//Model Esta;
+//______________________________AQUI VAN LAS VARIABLES DE MIS MODELOS
+Model Esta;
+Model Piramide;
+Model Souv;
 
-
-
-//_________________________________________________________________________________________
 Skybox skybox;
 
 //materiales
@@ -295,8 +294,16 @@ int main()
 
 	
 	//___________________________________________________AQUI CREO VARIABLES DE TIPO MODEL
-	//Esta = Model();
-	//Esta.LoadModel("Models/piramid.fbx");
+	
+
+	Piramide = Model();
+	Piramide.LoadModel("Models/piramid.obj");
+
+	Souv = Model();
+	Souv.LoadModel("Models/Souv.obj");
+
+	Esta = Model();
+	Esta.LoadModel("Models/Camioneta.fbx");
 
 
 
@@ -396,15 +403,26 @@ int main()
 		//_________________________________A PARTIR DE AQUI CARGO MODELOS
 
 
-		//Cargando piramide
+		//Cargando Souvenirs
 		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(1.0f, 0.5f, -1.5f));
-		model = glm::scale(model, glm::vec3(2.5f, 2.5f, 2.5f));
-		model = glm::rotate(model, -90 * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		//Esta.RenderModel();
-		
+		Souv.RenderModel();
 
+		//Cargando Piramide
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(10.0f, 0.5f, -5.5f));
+		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Piramide.RenderModel();
+		
+		//Cargando Estacionamiento
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(20.0f, 0.5f, -5.5f));
+		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Esta.RenderModel();
 
 		
 		//__________________________________AQUI DEJO DE CARGAR MODELOS
