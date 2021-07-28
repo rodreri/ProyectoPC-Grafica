@@ -1,0 +1,336 @@
+# Blender MTL File: 'humano.blend'
+# Material Count: 31
+
+newmtl FABRIC_3_FRONT_7633
+Ns 26.999999
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\Beige Tencel.tga
+
+newmtl M_body
+Ns 90.000016
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\piel.tga
+
+newmtl M_eye
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\ojo.tga
+
+newmtl M_eye_specular_Light
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\ojo.tga
+
+newmtl M_eyelashes
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.037263 0.032303 0.024842
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl M_face
+Ns 90.000016
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cara.tga
+
+newmtl M_leg_hand
+Ns 90.000016
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\piel.tga
+
+newmtl Material.001
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\ojo.tga
+
+newmtl Material.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cabello2.tga
+
+newmtl Material.003
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cabello2.tga
+
+newmtl Material.004
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cabello2.tga
+
+newmtl Material7625
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.819608 0.819608 0.819608
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Users\\alexn\\Desktop\\sb\\screen9.jpg
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\screen9.tga
+
+newmtl Material7646
+Ns 423.000014
+Ka 1.000000 1.000000 1.000000
+Kd 0.819608 0.819608 0.819608
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl Material7650
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.184314 0.184314 0.184314
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material7662
+Ns 90.000016
+Ka 1.000000 1.000000 1.000000
+Kd 0.254410 0.254410 0.254410
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material7674
+Ns 81.000006
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material7692
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.819608 0.819608 0.819608
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl Material7711
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.819608 0.819608 0.819608
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl Material7730
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.819608 0.819608 0.819608
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl dum
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cabello2.tga
+
+newmtl ear_dummy1
+Ns 18.000005
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cara.tga
+
+newmtl hair01
+Ns 49.726612
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cabello2.tga
+
+newmtl hair01_tr
+Ns 62.417283
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\cabello2.tga
+
+newmtl lambert6
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl lambert6.001
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl phong1
+Ns 316.230198
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl phong1.001
+Ns 316.230198
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl phong2
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.161600 0.133414 0.088072
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl phong2.001
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.161600 0.133414 0.088072
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl rr
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Persona\\textures\\vestuario.tga
+
+newmtl rr.001
+Ns 45.000011
+Ka 1.000000 1.000000 1.000000
+Kd 0.745098 0.745098 0.745098
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Users\\alexn\\Desktop\\sb\\man_boots.jpg
