@@ -71,6 +71,8 @@ Model Lunaa;
 Model Car;
 Model Car2;
 
+Model Arbol;
+
 Skybox skybox;
 
 //materiales
@@ -327,6 +329,12 @@ int main()
 	Car2 = Model();
 	Car2.LoadModel("Models/mustang.obj");
 
+	Arbol = Model();
+	Arbol.LoadModel("Models/arbol.obj");
+
+
+
+
 
 	//____________________________________________________TERMINA INSTANCIAS DE MODELOS
 
@@ -493,6 +501,13 @@ int main()
 			Car2.RenderModel();
 		}
 		
+
+		//Cargando el árbol
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(40.0f, 0.5f, -5.5f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Arbol.RenderModel();
 
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
