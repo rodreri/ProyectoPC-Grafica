@@ -64,14 +64,12 @@ Texture Tagave;
 Model Esta;
 Model Piramide;
 Model Souv;
-
 Model Soll;
 Model Lunaa;
-
 Model Car;
 Model Car2;
-
 Model Arbol;
+Model Banio;
 
 Skybox skybox;
 
@@ -332,6 +330,8 @@ int main()
 	Arbol = Model();
 	Arbol.LoadModel("Models/arbol.obj");
 
+	Banio = Model();
+	Banio.LoadModel("Models/baño.obj");
 
 
 
@@ -509,6 +509,8 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Arbol.RenderModel();
 
+		//Cargando el árbol
+		
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
 		//PRIMERO CUENTAS LOS KEYFRAMES QUE GENERASTE 
