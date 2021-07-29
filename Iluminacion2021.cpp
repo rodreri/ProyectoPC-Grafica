@@ -1,8 +1,8 @@
 /*
-Semestre 2021-2
-Práctica : Iluminación
-Cambios en el shader, en lugar de enviar la textura en el shader de fragmentos, enviaremos el finalcolor
+Minero Pineda Erick Rodrigo
+Zarco Muñoz Gabriel (El jimmy muñoz)
 */
+
 //para cargar imagen
 #define STB_IMAGE_IMPLEMENTATION
 
@@ -302,23 +302,15 @@ int main()
 
 	camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -60.0f, 0.0f, 5.0f, 0.5f);
 
-	brickTexture = Texture("Textures/brick.png");
-	brickTexture.LoadTextureA();
-	dirtTexture = Texture("Textures/dirt.png");
-	dirtTexture.LoadTextureA();
-	plainTexture = Texture("Textures/plain.png");
-	plainTexture.LoadTextureA();
-	dadoTexture = Texture("Textures/dado.tga");
-	dadoTexture.LoadTextureA();
+	//_________________________________________________AQUI CARGAMOS EL PISO
 	pisoTexture = Texture("Textures/pasto.tga");
 	pisoTexture.LoadTextureA();
-	Tagave = Texture("Textures/Agave.tga");
-	Tagave.LoadTextureA();
+
 
 	
-	//___________________________________________________AQUI CREO VARIABLES DE TIPO MODEL
+	//___________________________________________________AQUI CREAMOS VARIABLES DE TIPO MODEL
 	Soll = Model();
-	Soll.LoadModel("Models/Luna2.obj");
+	Soll.LoadModel("Models/Sol2.obj");
 	Lunaa = Model();
 	Lunaa.LoadModel("Models/Luna2.obj");
 
@@ -332,7 +324,7 @@ int main()
 	Esta.LoadModel("Models/depo.obj");
 
 	Car = Model();
-	Car.LoadModel("Models/huracan.obj");
+	Car.LoadModel("Models/huracan2.obj");
 
 	Car2 = Model();
 	Car2.LoadModel("Models/mustang.obj");
@@ -344,8 +336,9 @@ int main()
 
 
 
-	//____________________________________________________AQUI DEJO DE CARGAR MODELOS
+	//____________________________________________________TERMINA INSTANCIAS DE MODELOS
 
+	//__________________________________________________________SKYBOX
 	std::vector<std::string> skyboxFaces;
 	skyboxFaces.push_back("Textures/Skybox/Verde/right.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/left.tga");
@@ -353,8 +346,6 @@ int main()
 	skyboxFaces.push_back("Textures/Skybox/Verde/up.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/back.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/front.tga");
-	
-
 	skybox = Skybox(skyboxFaces);
 
 	Material_brillante = Material(4.0f, 256);
@@ -413,7 +404,7 @@ int main()
 	*/
 
 	//Sonido de fondo
-	PlaySound("Sounds/Prayer.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+	//PlaySound("Sounds/Prayer.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
 
 
 	////Loop mientras no se cierra la ventana
@@ -471,35 +462,28 @@ int main()
 
 		//Cargando Souvenirs
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(1.0f, 0.5f, -1.5f));
+		model = glm::translate(model, glm::vec3(1.0f, 1.0f, 1.0f));
 		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Souv.RenderModel();
 
 		//Cargando Piramide
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(10.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		model = glm::translate(model, glm::vec3(150.0f, 0.5f, 10.0f));
+		model = glm::scale(model, glm::vec3(15.0f, 15.0f, 15.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Piramide.RenderModel();
-		
-		//Cargando Estacionamiento
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(20.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Esta.RenderModel();
 
 		//Cargando Lamborghini
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(20.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		model = glm::translate(model, glm::vec3(20.0f, 0.0f, -6.2f));
+		model = glm::scale(model, glm::vec3(0.7f, 0.7f, 0.7f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Car.RenderModel();
 
 		//Cargando el mustang
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(40.0f, 0.5f, -5.5f));
+		model = glm::translate(model, glm::vec3(25.0f, 0.5f, -5.5f));
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Car2.RenderModel();
