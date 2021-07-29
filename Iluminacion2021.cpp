@@ -37,6 +37,10 @@ Cambios en el shader, en lugar de enviar la textura en el shader de fragmentos, 
 #include "PointLight.h"
 #include "Material.h"
 
+//incluimos la clase animacion
+#include "anima.h"
+
+
 const float toRadians = 3.14159265f / 180.0f;
 
 Window mainWindow;
@@ -56,6 +60,9 @@ Texture Tagave;
 Model Esta;
 Model Piramide;
 Model Souv;
+
+Model Soll;
+Model Lunaa;
 
 Skybox skybox;
 
@@ -267,6 +274,13 @@ void CreateShaders()
 }
 
 
+//---------------------------------------ANIMACIONES---------------------------------------------
+//creo mis variables una por cada objeto que voy a mover
+
+anima Sol;
+bool noche=false;
+
+
 
 int main()
 {
@@ -294,7 +308,10 @@ int main()
 
 	
 	//___________________________________________________AQUI CREO VARIABLES DE TIPO MODEL
-	
+	Soll = Model();
+	Soll.LoadModel("Models/Sol.obj");
+	Lunaa = Model();
+	Lunaa.LoadModel("Models/Luna.obj");
 
 	Piramide = Model();
 	Piramide.LoadModel("Models/piramid.obj");
@@ -303,28 +320,31 @@ int main()
 	Souv.LoadModel("Models/Souv.obj");
 
 	Esta = Model();
-	Esta.LoadModel("Models/Camioneta.fbx");
+	Esta.LoadModel("Models/depo.obj");
 
 
 
 	//____________________________________________________AQUI DEJO DE CARGAR MODELOS
 
 	std::vector<std::string> skyboxFaces;
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_rt.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/right.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/left.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/down.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/up.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/back.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/front.tga");
+	/*skyboxFaces.push_back("Textures/Skybox/cupertin-lake_rt.tga");
 	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_lf.tga");
 	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_dn.tga");
 	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_up.tga");
 	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_bk.tga");
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_ft.tga");
+	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_ft.tga");*/
 
 	skybox = Skybox(skyboxFaces);
 
 	Material_brillante = Material(4.0f, 256);
 	Material_opaco = Material(0.3f, 4);
 
-	//posición inicial del helicóptero
-	glm::vec3 posblackhawk = glm::vec3(-20.0f, 6.0f, -1.0);
-	//posicion inicial del coche
 	
 
 	//luz direccional, sólo 1 y siempre debe de existir
@@ -349,7 +369,34 @@ int main()
 		uniformSpecularIntensity = 0, uniformShininess = 0;
 	glm::mat4 projection = glm::perspective(45.0f, (GLfloat)mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 300.0f);
 	
+
+	//_______________________________________________________AQUI DIGO COMO SE VA A MOVER ANIMACION
 	
+	// KEY FRAMES SOL
+
+	Sol.KeyFrame[0].X = 0.0f; 
+	Sol.KeyFrame[0].Y = 0.0f;
+
+	Sol.KeyFrame[1].X = 0.0f;
+	Sol.KeyFrame[1].Y = 20.0f;
+
+	Sol.KeyFrame[2].X = 0.0f;
+	Sol.KeyFrame[2].Y = 40.0f;
+
+	Sol.KeyFrame[3].X = 0.0f;
+	Sol.KeyFrame[3].Y = 20.0f;
+
+	Sol.KeyFrame[4].X = 0.0f;
+	Sol.KeyFrame[4].Y = 0.0f;
+
+
+	/************NOTA
+		UNA VEZ TERMINADA LA ANIMACION SE REGRESA AL PUNTO INICIAL
+		SI NO QUIERES QUE PASE ESTO COMENTA LA LINEA 
+		resetall()
+		en la funcion animacion en el doc Anima.cpp
+	*/
+
 	////Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
 	{
@@ -420,9 +467,53 @@ int main()
 		//Cargando Estacionamiento
 		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(20.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Esta.RenderModel();
+
+		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
+		
+		//PRIMERO CUENTAS LOS KEYFRAMES QUE GENERASTE 
+		Sol.setMaxIndex(5);
+
+		//iniciamos animacion
+		Sol.animacion();
+
+		//logica para el cambio dia noche
+
+		if (!Sol.play) {
+			 noche = !noche;
+			 Sol.play = true;
+		}
+
+
+		if (!noche) {
+			//render del modelo del sol
+
+			model = glm::mat4(1.0);
+			//En esta linea agregamos lo que se va ir sumando al traslate
+			model = glm::translate(model, glm::vec3(0.0f+Sol.X, 0.0f+Sol.Y, 0.0f+Sol.Z));
+			/*Para el giro solo se puede manejar asi  en cualquier modelo:
+			model = glm::rotate(model, Sol.GX * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+			model = glm::rotate(model, Sol.GY * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+			model = glm::rotate(model, Sol.GZ * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+			*/
+			model = glm::scale(model, glm::vec3(0.5f, 0.05f, 0.5f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Soll.RenderModel();
+		}
+		else {
+			//render del moderlo de Luna
+
+			model = glm::mat4(1.0);
+			//En esta linea agregamos lo que se va ir sumando al traslate
+			model = glm::translate(model, glm::vec3(0.0f + Sol.X, 0.5f + Sol.Y, 0.0f + Sol.Z));
+			model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Lunaa.RenderModel();
+		}
+
+		
 
 		
 		//__________________________________AQUI DEJO DE CARGAR MODELOS
