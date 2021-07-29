@@ -15,12 +15,14 @@ public:
 	GLfloat getYChange();
 	GLfloat getmuevex() { return muevex; }
 	bool getShouldClose() {
-		return  glfwWindowShouldClose(mainWindow);}
+		return  glfwWindowShouldClose(mainWindow);
+	}
 	bool* getsKeys() { return keys; }
 	void swapBuffers() { return glfwSwapBuffers(mainWindow); }
-	
+	//Método publico para cambiar de camara
+	int getNumCamara() { return numcamara; }
 	~Window();
-private: 
+private:
 	GLFWwindow *mainWindow;
 	GLint width, height;
 	bool keys[1024];
@@ -31,6 +33,7 @@ private:
 	GLfloat xChange;
 	GLfloat yChange;
 	GLfloat muevex;
+	int numcamara = 0;//valor para la camara
 	bool mouseFirstMoved;
 	static void ManejaTeclado(GLFWwindow* window, int key, int code, int action, int mode);
 	static void ManejaMouse(GLFWwindow* window, double xPos, double yPos);
