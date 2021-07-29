@@ -475,15 +475,7 @@ int main()
 		Material_opaco.UseMaterial(uniformSpecularIntensity, uniformShininess);
 		meshList[2]->RenderMesh();
 
-		//_________________________________A PARTIR DE AQUI CARGO MODELOS
-
-
-		//Cargando Souvenirs
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(1.0f, 1.0f, 1.0f));
-		model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Souv.RenderModel();
+		//________________________________________________A PARTIR DE AQUI CARGO MODELOS
 
 		//Cargando las piramides
 		{
@@ -504,35 +496,338 @@ int main()
 		
 		//Cargando estacionamientos
 		{
-			//Cargando Lamborghini
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(20.0f, 0.0f, -6.3f));
-			model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Car.RenderModel();
+			//Fila 1
+			{
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 0.0f, -250.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 0.0f, -250.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
 
-			//Cargando el mustang
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(25.0f, 0.0f, -5.2f));
-			model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Car2.RenderModel();
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -250.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -250.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-220.0f, 0.0f, -250.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -250.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+			}
+
+			//Fila 2
+			{
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 0.0f, -240.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 0.0f, -240.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -240.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -240.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-220.0f, 0.0f, -240.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -240.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+			}
+
+			//Fila 3
+			{
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 0.0f, -230.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 0.0f, -230.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -230.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -230.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-220.0f, 0.0f, -230.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -230.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+			}
+
+			//Fila 4
+			{
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 0.0f, -220.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 0.0f, -220.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -220.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -220.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-220.0f, 0.0f, -220.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -220.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+			}
+
+			//Fila 5
+			{
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 0.0f, -210.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 0.0f, -210.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -210.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -210.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-220.0f, 0.0f, -210.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -210.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+			}
+
+			//Fila 6
+			{
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-180.0f, 0.0f, -200.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-185.0f, 0.0f, -200.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -200.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -200.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+				//Cargando Lamborghini
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-220.0f, 0.0f, -200.0f));
+				model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car.RenderModel();
+				//Cargando el mustang
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -200.0));
+				model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
+				model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Car2.RenderModel();
+
+			}
+			
+
 		}
 		
+		//Vegetacion
+		{
+			//Cargando el árbol
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(40.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(0.025f, 0.025f, 0.025f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Arbol.RenderModel();
+		}
 
-		//Cargando el árbol
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(40.0f, 0.0f, -5.5f));
-		model = glm::scale(model, glm::vec3(0.025f, 0.025f, 0.025f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Arbol.RenderModel();
+		//Taquilla, baños y Souvenirs
+		{
+			//Cargando el baño
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Banio.RenderModel();
 
-		//Cargando el baño
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(50.0f, 0.0f, -5.5f));
-		model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Banio.RenderModel();
+			//Cargando la taquilla
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(0.75f, 0.75f, 0.75f));
+			model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Taquilla.RenderModel();
+
+			//Cargando Souvenirs
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(- 180.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Souv.RenderModel();
+		}
+		
 
 		//Cargando el quetzalcoatl
 		model = glm::mat4(1.0);
@@ -541,26 +836,254 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Quetzal.RenderModel();
 
-		//Cargando el humano
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(51.0f, 0.0f, -5.55f));
-		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Humano.RenderModel();
+		
 
-		//Cargando la taquilla
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(60.0f, 0.0f, -5.5f));
-		model = glm::scale(model, glm::vec3(0.75f, 0.75f, 0.75f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Taquilla.RenderModel();
 
-		//Cargando la taquilla
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(65.0f, 0.0f, -5.5f));
-		model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Mesa.RenderModel();
+		//Zona de comida
+		{
+			//Cargando la Mesa
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(65.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Mesa.RenderModel();
+		}
+
+		//Personas
+		{
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -5.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -5.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -5.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -5.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -6.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -6.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -6.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -6.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -6.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -6.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -7.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -7.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -7.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -7.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -7.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -7.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -8.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -8.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -8.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -8.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -8.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -8.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+			//;lllllllllllllllllllllllllllllllllllllllllllllll
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -9.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -9.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -9.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -9.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -9.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -9.5f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -10.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -10.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -10.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+			
+		}
+		
 
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
