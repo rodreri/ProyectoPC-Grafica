@@ -379,12 +379,19 @@ int main()
 
 	unsigned int spotLightCount = 0;
 	//linterna
-	spotLights[0] = SpotLight(1.0f, 1.0f, 1.0f, //Color
-		0.0f, 2.0f,
-		-225.0f, 0.0f, -5.5f, //Posición
-		0.0f, -1.0f, 0.0f, //Hacia dónde alumbra
+	//spotLights[0] = SpotLight(1.0f, 1.0f, 1.0f, //Color
+	//	0.0f, 2.0f,
+	//	-225.0f, 0.0f, -5.5f, //Posición
+	//	0.0f, -1.0f, 0.0f, //Hacia dónde alumbra
+	//	1.0f, 0.0f, 0.0f,
+	//	5.0f);
+	//spotLightCount++;
+	spotLights[0] = SpotLight(1.0f, 1.0f, 1.0f,
+		20.0f, 40.0f,
+		-225.0f, 0.0f, -5.5f,
+		0.0f, -1.0f, 0.0f,
 		1.0f, 0.0f, 0.0f,
-		5.0f);
+		15.0f);
 	spotLightCount++;
 	
 
@@ -425,7 +432,7 @@ int main()
 	*/
 
 	//Sonido de fondo
-	//PlaySound("Sounds/Prayer.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+	PlaySound("Sounds/Aves.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
 
 
 	////Loop mientras no se cierra la ventana
@@ -1316,47 +1323,66 @@ int main()
 		
 		
 
-		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
-		//PRIMERO CUENTAS LOS KEYFRAMES QUE GENERASTE 
+		
+		//KEYFRAMES QUE GENERAdos
 		Sol.setMaxIndex(5);
 
 		//iniciamos animacion
 		Sol.animacion();
 
-		//logica para el cambio dia noche
 
-		if (!Sol.play) {
-			 noche = !noche;
-			 Sol.play = true;
-		}
+		//Sol
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(170.0f, 80.0f + Sol.Y, -13.0f));
+		model = glm::rotate(model, Sol.GY * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Soll.RenderModel();
+
+		//luna
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(0.0f, 40.0f + Sol.Y, -215.0f));
+		model = glm::rotate(model, Sol.GY * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Lunaa.RenderModel();
 
 
-		if (!noche) {
-			//render del modelo del sol
+		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
+		////logica para el cambio dia noche
 
-			model = glm::mat4(1.0);
-			//En esta linea agregamos lo que se va ir sumando al traslate
-			model = glm::translate(model, glm::vec3(0.0f+Sol.X, 0.0f+Sol.Y, 0.0f+Sol.Z));
-			/*Para el giro solo se puede manejar asi  en cualquier modelo:
-			model = glm::rotate(model, Sol.GX * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
-			model = glm::rotate(model, Sol.GY * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-			model = glm::rotate(model, Sol.GZ * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-			*/
-			model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Soll.RenderModel();
-		}
-		else {
-			//render del moderlo de Luna
+		//if (!Sol.play) {
+		//	 noche = !noche;
+		//	 Sol.play = true;
+		//}
 
-			model = glm::mat4(1.0);
-			//En esta linea agregamos lo que se va ir sumando al traslate
-			model = glm::translate(model, glm::vec3(0.0f + Sol.X, 0.5f + Sol.Y, 0.0f + Sol.Z));
-			model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Lunaa.RenderModel();
-		}
+
+		//if (!noche) {
+		//	//render del modelo del sol
+
+		//	model = glm::mat4(1.0);
+		//	//En esta linea agregamos lo que se va ir sumando al traslate
+		//	model = glm::translate(model, glm::vec3(0.0f+Sol.X, 0.0f+Sol.Y, 0.0f+Sol.Z));
+		//	/*Para el giro solo se puede manejar asi  en cualquier modelo:
+		//	model = glm::rotate(model, Sol.GX * toRadians, glm::vec3(1.0f, 0.0f, 0.0f));
+		//	model = glm::rotate(model, Sol.GY * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		//	model = glm::rotate(model, Sol.GZ * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+		//	*/
+		//	model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		//	glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		//	Soll.RenderModel();
+		//}
+		//else {
+		//	//render del moderlo de Luna
+
+		//	model = glm::mat4(1.0);
+		//	//En esta linea agregamos lo que se va ir sumando al traslate
+		//	model = glm::translate(model, glm::vec3(0.0f + Sol.X, 0.5f + Sol.Y, 0.0f + Sol.Z));
+		//	model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+		//	glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		//	Lunaa.RenderModel();
+		//}
 
 		
 
