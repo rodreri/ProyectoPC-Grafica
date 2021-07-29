@@ -1,10 +1,8 @@
 ﻿  Iluminacion2021.cpp
-c:\users\kidji\onedrive\escritorio\proyectopc-grafica\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\kidji\onedrive\escritorio\proyectopc-grafica\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
 c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': redefinición de macro
-  c:\users\kidji\onedrive\escritorio\proyectopc-grafica\include\glfw3.h(98): note: vea la definición anterior de 'APIENTRY'
-c:\users\kidji\onedrive\escritorio\proyectopc-grafica\iluminacion2021.cpp(422): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\kidji\onedrive\escritorio\proyectopc-grafica\iluminacion2021.cpp(424): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-  LINK : no se encontró C:\Users\kidji\OneDrive\Escritorio\ProyectoPC-Grafica\Debug\Carga.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
-LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-  Carga.vcxproj -> C:\Users\kidji\OneDrive\Escritorio\ProyectoPC-Grafica\Debug\Carga.exe
+  c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\include\glfw3.h(98): note: vea la definición anterior de 'APIENTRY'
+c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\iluminacion2021.cpp(413): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\iluminacion2021.cpp(415): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  Carga.vcxproj -> C:\Users\rodri\Documents\LabPCG\Github\GitHub\ProyectoPCGrafica\ProyectoPC-Grafica\Debug\Carga.exe
