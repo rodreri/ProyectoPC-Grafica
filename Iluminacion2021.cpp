@@ -301,7 +301,7 @@ int main()
 	plainTexture.LoadTextureA();
 	dadoTexture = Texture("Textures/dado.tga");
 	dadoTexture.LoadTextureA();
-	pisoTexture = Texture("Textures/piso.tga");
+	pisoTexture = Texture("Textures/pasto.tga");
 	pisoTexture.LoadTextureA();
 	Tagave = Texture("Textures/Agave.tga");
 	Tagave.LoadTextureA();
@@ -309,9 +309,9 @@ int main()
 	
 	//___________________________________________________AQUI CREO VARIABLES DE TIPO MODEL
 	Soll = Model();
-	Soll.LoadModel("Models/Sol.obj");
+	Soll.LoadModel("Models/Luna2.obj");
 	Lunaa = Model();
-	Lunaa.LoadModel("Models/Luna.obj");
+	Lunaa.LoadModel("Models/Luna2.obj");
 
 	Piramide = Model();
 	Piramide.LoadModel("Models/piramid.obj");
