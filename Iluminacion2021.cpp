@@ -325,9 +325,6 @@ int main()
 	Souv = Model();
 	Souv.LoadModel("Models/Souv.obj");
 
-	//Esta = Model();
-	//Esta.LoadModel("Models/depo.obj");
-
 	Car = Model();
 	Car.LoadModel("Models/huracan2.obj");
 
@@ -380,11 +377,17 @@ int main()
 
 	//______________________________________________________A PARTIR DE AQUI VAN LAS LUCES
 
-
-	
-
 	unsigned int spotLightCount = 0;
+	//linterna
+	spotLights[0] = SpotLight(1.0f, 1.0f, 1.0f, //Color
+		0.0f, 2.0f,
+		-225.0f, 0.0f, -5.5f, //Posición
+		0.0f, -1.0f, 0.0f, //Hacia dónde alumbra
+		1.0f, 0.0f, 0.0f,
+		5.0f);
+	spotLightCount++;
 	
+
 	
 
 	//_____________________________________________________AQUI TERMINAN LAS LUCES
@@ -465,7 +468,7 @@ int main()
 		glm::mat4 model(1.0);
 		glm::mat4 modeaux(1.0);
 
-		//Creo que este pedo es el piso
+		//Cargando el piso
 		model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(0.0f, -1.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(30.0f, 1.0f, 30.0f));
