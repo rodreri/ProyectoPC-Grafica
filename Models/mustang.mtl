@@ -1,0 +1,136 @@
+# Blender MTL File: 'mustang.blend'
+# Material Count: 12
+
+newmtl black
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\window.tga
+
+newmtl body
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\bodybkgd.tga
+
+newmtl chassisblack
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\parts1.tga
+
+newmtl chassisprt
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\window.tga
+
+newmtl chrome
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\bodybkgd.tga
+
+newmtl engine
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\window.tga
+
+newmtl exhaust
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\bodybkgd.tga
+
+newmtl interior
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump ed1e9faca1721f04ec2b679038ac8294\\interior_bump.jpg
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\interior.tga
+map_Ks 476ac79bf38c3935ff09066ac4521f41\\interior.jpg
+
+newmtl lights
+Ns 719.999995
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd 0a08ca5aaab937e68a242177f8f8fba4\\parts1.jpg
+
+newmtl parts
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.588235 0.270588 0.270588
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\parts2.tga
+
+newmtl tires
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.176471 0.176471 0.176471
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\tires_bump.tga
+
+newmtl windows
+Ns 449.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.460000
+illum 6
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Mustang\\textures\\window.tga
