@@ -305,7 +305,7 @@ int main()
 	CrearCubo();
 	CreateShaders();
 
-	camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -60.0f, 0.0f, 1.0f, 0.5f);
+	camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -60.0f, 0.0f, 5.0f, 0.5f);
 
 	//_________________________________________________AQUI CARGAMOS EL PISO
 	pisoTexture = Texture("Textures/pasto.tga");
@@ -324,6 +324,9 @@ int main()
 
 	Souv = Model();
 	Souv.LoadModel("Models/Souv.obj");
+
+	//Esta = Model();
+	//Esta.LoadModel("Models/depo.obj");
 
 	Car = Model();
 	Car.LoadModel("Models/huracan2.obj");
@@ -425,36 +428,15 @@ int main()
 	////Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
 	{
-		glfwPollEvents();
-
-		//Manejo de camaras
-		if (mainWindow.getNumCamara() == 0) {
-
-			camera.keyControl(mainWindow.getsKeys(), deltaTime);
-			camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
-		}
-		else if (mainWindow.getNumCamara() == 2) {
-			//CAMARA DEL AVATAR
-			camera.setPosicion(glm::vec3(30.0f, 5.0f, -5.5f));
-			camera.setDireccion(glm::vec3(-1.0f, 0.0f, 0.0f));
-			camera.setGiro(0,-15);
-
-		}
-		else if (mainWindow.getNumCamara() == 4) {
-			camera.setPosicion(glm::vec3(0.0 + camera.getCameraPosition().x, 100.0f, 0.0f + camera.getCameraPosition().z));
-			camera.setDireccion(glm::vec3(-1.0f, 0.0f, 0.0f));
-			camera.setGiro(0, -90);
-			camera.keyControl2(mainWindow.getsKeys(), deltaTime);
-		}
-
-
 		GLfloat now = glfwGetTime();
 		deltaTime = now - lastTime;
 		deltaTime += (now - lastTime) / limitFPS;
 		lastTime = now;
 
-	
-
+		//Recibir eventos del usuario
+		glfwPollEvents();
+		camera.keyControl(mainWindow.getsKeys(), deltaTime);
+		camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
 
 		// Clear the window
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -812,8 +794,8 @@ int main()
 		}
 		
 		//Vegetacion
-		{
-		//Zona del estacionamiento
+		{	
+			//Zona del estacionamiento
 			{
 				//Cargando el árbol
 				model = glm::mat4(1.0);
@@ -1024,6 +1006,8 @@ int main()
 				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 				Arbol.RenderModel();
 			}
+
+			
 		}
 
 		//Taquilla, baños y Souvenirs
@@ -1054,14 +1038,13 @@ int main()
 
 		//Cargando el quetzalcoatl
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(170.0f, 50.0f, 10.5f));
-		model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
-		model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(45.0f, 0.0f, -5.5f));
+		model = glm::scale(model, glm::vec3(0.025f, 0.025f, 0.025f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Quetzal.RenderModel();
 
-		//comentado para correrlo mas rapido
 		
+
 
 		//Zona de comida
 		{
@@ -1308,7 +1291,6 @@ int main()
 			
 		}
 		
-		
 
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
@@ -1337,7 +1319,7 @@ int main()
 			model = glm::rotate(model, Sol.GY * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 			model = glm::rotate(model, Sol.GZ * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
 			*/
-			model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+			model = glm::scale(model, glm::vec3(0.5f, 0.05f, 0.5f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Soll.RenderModel();
 		}
