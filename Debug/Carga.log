@@ -1,60 +1,10 @@
-﻿  Anima.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\anima.cpp(20): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
-  Camera.cpp
-  DirectionalLight.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\directionallight.cpp(18): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\directionallight.cpp(19): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\directionallight.cpp(21): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\directionallight.cpp(22): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-  Iluminacion2021.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+﻿  Iluminacion2021.cpp
+c:\users\kidji\onedrive\escritorio\proyectopc-grafica\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+c:\users\kidji\onedrive\escritorio\proyectopc-grafica\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
 c:\program files (x86)\windows kits\10\include\10.0.17763.0\shared\minwindef.h(130): warning C4005: 'APIENTRY': redefinición de macro
-  c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\include\glfw3.h(98): note: vea la definición anterior de 'APIENTRY'
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\iluminacion2021.cpp(414): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\iluminacion2021.cpp(416): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-  Light.cpp
-  Material.cpp
-  Mesh_tn.cpp
-  Model.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(16): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'const std::string'
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(16): warning C4474: "printf": se pasaron demasiados argumentos para la cadena de formato
-  c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(16): note: los marcadores de posición y sus parámetros esperan 1 argumentos variádicos, pero se proporcionaron 2
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(51): warning C4804: '<': uso no seguro del tipo 'bool' en la operación
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(51): warning C4018: '<': no coinciden signed/unsigned
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(138): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string'
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\model.cpp(147): warning C4477: 'printf' : la cadena de formato '%s' requiere un argumento de tipo 'char *', pero el argumento variádico 1 tiene el tipo 'std::string'
-  PointLight.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(28): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(29): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(30): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(32): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(33): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(34): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\pointlight.cpp(35): warning C4244: 'argumento': conversión de 'GLfloat' a 'GLint'; posible pérdida de datos
-  Shader_light.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\shader_light.cpp(202): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\shader_light.cpp(201): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\shader_light.cpp(215): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\shader_light.cpp(214): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\shader_light.cpp(213): warning C4244: 'argumento': conversión de 'GLuint' a 'GLfloat'; posible pérdida de datos
-  Skybox.cpp
-  Sphere.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\sphere.cpp(39): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\sphere.cpp(43): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-  SpotLight.cpp
-  Texture.cpp
-  Window.cpp
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.h(12): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.h(13): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(139): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(140): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(144): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(145): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(147): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(148): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-  Generando código...
-c:\users\rodri\documents\labpcg\github\github\proyectopcgrafica\proyectopc-grafica\window.cpp(75): warning C4715: 'Window::Initialise': no todas las rutas de acceso de control devuelven un valor
-  LINK : no se encontró C:\Users\rodri\Documents\LabPCG\Github\GitHub\ProyectoPCGrafica\ProyectoPC-Grafica\Debug\Carga.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  c:\users\kidji\onedrive\escritorio\proyectopc-grafica\include\glfw3.h(98): note: vea la definición anterior de 'APIENTRY'
+c:\users\kidji\onedrive\escritorio\proyectopc-grafica\iluminacion2021.cpp(422): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+c:\users\kidji\onedrive\escritorio\proyectopc-grafica\iluminacion2021.cpp(424): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+  LINK : no se encontró C:\Users\kidji\OneDrive\Escritorio\ProyectoPC-Grafica\Debug\Carga.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-  Carga.vcxproj -> C:\Users\rodri\Documents\LabPCG\Github\GitHub\ProyectoPCGrafica\ProyectoPC-Grafica\Debug\Carga.exe
+  Carga.vcxproj -> C:\Users\kidji\OneDrive\Escritorio\ProyectoPC-Grafica\Debug\Carga.exe

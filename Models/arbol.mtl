@@ -1,0 +1,24 @@
+# Blender MTL File: 'arbol.blend'
+# Material Count: 2
+
+newmtl hoja
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Arbol\\textures\\grass_test.tga
+
+newmtl tronco
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Arbol\\textures\\nature_trunk_0024_01_preview.tga
