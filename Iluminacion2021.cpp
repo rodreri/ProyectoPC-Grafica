@@ -40,6 +40,10 @@ Cambios en el shader, en lugar de enviar la textura en el shader de fragmentos, 
 //incluimos la clase animacion
 #include "anima.h"
 
+//Para el sonido
+#include <Windows.h>
+#include <mmsystem.h>
+
 
 const float toRadians = 3.14159265f / 180.0f;
 
@@ -399,6 +403,10 @@ int main()
 		resetall()
 		en la funcion animacion en el doc Anima.cpp
 	*/
+
+	//Sonido de fondo
+	PlaySound("Sounds/Prayer.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+
 
 	////Loop mientras no se cierra la ventana
 	while (!mainWindow.getShouldClose())
