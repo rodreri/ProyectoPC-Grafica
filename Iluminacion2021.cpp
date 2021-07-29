@@ -333,12 +333,7 @@ int main()
 	skyboxFaces.push_back("Textures/Skybox/Verde/up.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/back.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/front.tga");
-	/*skyboxFaces.push_back("Textures/Skybox/cupertin-lake_rt.tga");
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_lf.tga");
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_dn.tga");
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_up.tga");
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_bk.tga");
-	skyboxFaces.push_back("Textures/Skybox/cupertin-lake_ft.tga");*/
+	
 
 	skybox = Skybox(skyboxFaces);
 
