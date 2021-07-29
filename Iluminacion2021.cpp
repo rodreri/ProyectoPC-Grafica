@@ -64,6 +64,8 @@ Model Souv;
 Model Soll;
 Model Lunaa;
 
+Model Car;
+
 Skybox skybox;
 
 //materiales
@@ -322,6 +324,9 @@ int main()
 	Esta = Model();
 	Esta.LoadModel("Models/depo.obj");
 
+	Car = Model();
+	Car.LoadModel("Models/huracan2.obj");
+
 
 
 	//____________________________________________________AQUI DEJO DE CARGAR MODELOS
@@ -465,6 +470,13 @@ int main()
 		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Esta.RenderModel();
+
+		//Cargando Lamborghini
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(20.0f, 0.5f, -5.5f));
+		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Car.RenderModel();
 
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		

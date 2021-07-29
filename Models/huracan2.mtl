@@ -1,0 +1,269 @@
+# Blender MTL File: 'HURACAN 2021 low-poly.blend'
+# Material Count: 25
+
+newmtl BOLTS
+Ns 293.578962
+Ka 1.000000 1.000000 1.000000
+Kd 0.017388 0.017388 0.017388
+Ks 0.516667 0.516667 0.516667
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Black_matte_over_engine
+Ns 315.062566
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.108333 0.108333 0.108333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl CAR_BODY_METALLIC_HURACAN
+Ns 232.376554
+Ka 1.000000 1.000000 1.000000
+Kd 0.055914 0.489260 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\carroceria.tga
+
+newmtl Material
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl RIMS
+Ns 231.447979
+Ka 1.000000 1.000000 1.000000
+Kd 0.025394 0.025394 0.025394
+Ks 0.476190 0.476190 0.476190
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl TIRES
+Ns 273.000528
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.305285 0.305285 0.305285
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+map_Ns C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\roughness.jpg
+
+newmtl black_other_details
+Ns 443.821554
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl brake_disc
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.458333 0.458333 0.458333
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\a8uwml3v-900.tga
+
+newmtl brighter_glass
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.021534 0.021534 0.021534
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl darker_glass
+Ns 900.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl exhaust_pipes
+Ns 321.371204
+Ka 1.000000 1.000000 1.000000
+Kd 0.137584 0.137584 0.137584
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl front_bumper_hexagon_seamless
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\seamless_hexagon.tga
+map_Ks C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\seamless_hexagon.png
+
+newmtl front_hood_logo
+Ns 900.000000
+Ka 0.487805 0.487805 0.487805
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\lamborghini_logo.tga
+
+newmtl headlights_emission
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl headlights_glass
+Ns 867.570249
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.050000
+d 0.500000
+illum 9
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl headlights_inside_dark_matte
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.101626 0.101626 0.101626
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl headlights_rear_dark
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl holes_black_matte
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl logo_rear
+Ns 553.970825
+Ka 1.000000 1.000000 1.000000
+Kd 0.401969 0.401969 0.401969
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl nakladki
+Ns 217.562507
+Ka 1.000000 1.000000 1.000000
+Kd 0.195988 0.002208 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl rear_bumper
+Ns 236.109448
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\negro.tga
+
+newmtl reg_plate
+Ns 109.994066
+Ka 1.000000 1.000000 1.000000
+Kd 0.027210 0.027210 0.027210
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\carroceria.tga
+
+newmtl reg_plate_bg
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\kidji\\OneDrive\\Escritorio\\Gabo\\Octavo semestre\\Computación gráfica\\Laboratorio\\Proyecto\\Lamborghini\\textures\\carroceria.tga
+
+newmtl turn_signals_white
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl underwheel
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
