@@ -441,7 +441,7 @@ int main()
 
 		//Creo que este pedo es el piso
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, -1.0f, 0.0f));
 		model = glm::scale(model, glm::vec3(30.0f, 1.0f, 30.0f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		pisoTexture.UseTexture();
@@ -459,26 +459,40 @@ int main()
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Souv.RenderModel();
 
-		//Cargando Piramide
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(150.0f, 0.5f, 10.0f));
-		model = glm::scale(model, glm::vec3(15.0f, 15.0f, 15.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Piramide.RenderModel();
+		//Cargando las piramides
+		{
+			//Cargando Piramide del SOL
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(150.0f, 0.5f, 10.0f));
+			model = glm::scale(model, glm::vec3(15.0f, 15.0f, 15.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Piramide.RenderModel();
 
-		//Cargando Lamborghini
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(20.0f, 0.0f, -6.2f));
-		model = glm::scale(model, glm::vec3(0.7f, 0.7f, 0.7f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Car.RenderModel();
+			//Cargando Piramide de la LUNA
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(0.0f, 0.5f, -180.0f));
+			model = glm::scale(model, glm::vec3(9.0f, 9.0f, 9.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Piramide.RenderModel();
+		}
+		
+		//Cargando estacionamientos
+		{
+			//Cargando Lamborghini
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(20.0f, 0.0f, -6.3f));
+			model = glm::scale(model, glm::vec3(0.7f, 0.7f, 0.7f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Car.RenderModel();
 
-		//Cargando el mustang
-		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(25.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-		Car2.RenderModel();
+			//Cargando el mustang
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(25.0f, 0.0f, -5.2f));
+			model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Car2.RenderModel();
+		}
+		
 
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
