@@ -471,14 +471,14 @@ int main()
 		{
 			//Cargando Piramide del SOL
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(170.0f, 0.5f, 10.0f));
+			model = glm::translate(model, glm::vec3(200.0f, 0.5f, 10.0f));
 			model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Piramide.RenderModel();
 
 			//Cargando Piramide de la LUNA
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(0.0f, 0.5f, -200.0f));
+			model = glm::translate(model, glm::vec3(0.0f, 0.5f, -220.0f));
 			model = glm::scale(model, glm::vec3(11.0f, 11.0f, 11.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Piramide.RenderModel();
@@ -504,8 +504,8 @@ int main()
 
 		//Cargando el árbol
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(40.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(200.0f, 0.5f, -90.0f));
+		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Arbol.RenderModel();
 
