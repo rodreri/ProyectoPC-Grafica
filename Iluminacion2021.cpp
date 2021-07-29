@@ -1,6 +1,9 @@
 /*
 Minero Pineda Erick Rodrigo
-Zarco Muñoz Gabriel (El jimmy muñoz)
+Zarco Muñoz Gabriel 
+Semestre 2021-2
+Grupo de lab: 07
+Grupo de teoría: 03
 */
 
 //para cargar imagen
@@ -70,6 +73,10 @@ Model Car;
 Model Car2;
 Model Arbol;
 Model Banio;
+Model Humano;
+Model Mesa;
+Model Quetzal;
+Model Taquilla;
 
 Skybox skybox;
 
@@ -318,8 +325,8 @@ int main()
 	Souv = Model();
 	Souv.LoadModel("Models/Souv.obj");
 
-	Esta = Model();
-	Esta.LoadModel("Models/depo.obj");
+	//Esta = Model();
+	//Esta.LoadModel("Models/depo.obj");
 
 	Car = Model();
 	Car.LoadModel("Models/huracan2.obj");
@@ -331,8 +338,19 @@ int main()
 	Arbol.LoadModel("Models/arbol.obj");
 
 	Banio = Model();
-	Banio.LoadModel("Models/baño.obj");
+	Banio.LoadModel("Models/banio.obj");
 
+	Humano = Model();
+	Humano.LoadModel("Models/humano3.obj");
+
+	Mesa = Model();
+	Mesa.LoadModel("Models/mesa3.obj");
+
+	Quetzal = Model();
+	Quetzal.LoadModel("Models/quetzalcoatl3.obj");
+
+	Taquilla = Model();
+	Taquilla.LoadModel("Models/Taquilla.obj");
 
 
 
@@ -471,14 +489,14 @@ int main()
 		{
 			//Cargando Piramide del SOL
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(170.0f, 0.5f, 10.0f));
-			model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+			model = glm::translate(model, glm::vec3(170.0f, 0.0f, 10.0f));
+			model = glm::scale(model, glm::vec3(30.0f, 30.0f, 30.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Piramide.RenderModel();
 
 			//Cargando Piramide de la LUNA
 			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(0.0f, 0.5f, -200.0f));
+			model = glm::translate(model, glm::vec3(0.0f, 0.0f, -200.0f));
 			model = glm::scale(model, glm::vec3(11.0f, 11.0f, 11.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Piramide.RenderModel();
@@ -489,14 +507,14 @@ int main()
 			//Cargando Lamborghini
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(20.0f, 0.0f, -6.3f));
-			model = glm::scale(model, glm::vec3(0.7f, 0.7f, 0.7f));
+			model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Car.RenderModel();
 
 			//Cargando el mustang
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(25.0f, 0.0f, -5.2f));
-			model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+			model = glm::scale(model, glm::vec3(0.4f, 0.4f, 0.4f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Car2.RenderModel();
 		}
@@ -504,13 +522,46 @@ int main()
 
 		//Cargando el árbol
 		model = glm::mat4(1.0);
-		model = glm::translate(model, glm::vec3(40.0f, 0.5f, -5.5f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(40.0f, 0.0f, -5.5f));
+		model = glm::scale(model, glm::vec3(0.025f, 0.025f, 0.025f));
 		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		Arbol.RenderModel();
 
-		//Cargando el árbol
-		
+		//Cargando el baño
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(50.0f, 0.0f, -5.5f));
+		model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Banio.RenderModel();
+
+		//Cargando el quetzalcoatl
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(45.0f, 0.0f, -5.5f));
+		model = glm::scale(model, glm::vec3(0.025f, 0.025f, 0.025f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Quetzal.RenderModel();
+
+		//Cargando el humano
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(51.0f, 0.0f, -5.55f));
+		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Humano.RenderModel();
+
+		//Cargando la taquilla
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(60.0f, 0.0f, -5.5f));
+		model = glm::scale(model, glm::vec3(0.75f, 0.75f, 0.75f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Taquilla.RenderModel();
+
+		//Cargando la taquilla
+		model = glm::mat4(1.0);
+		model = glm::translate(model, glm::vec3(65.0f, 0.0f, -5.5f));
+		model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		Mesa.RenderModel();
+
 		//TOMANDO ESTO COMO EJEMPLO PARA PONER LA ANIMACION LUNA SOL
 		
 		//PRIMERO CUENTAS LOS KEYFRAMES QUE GENERASTE 
