@@ -3,7 +3,7 @@ Minero Pineda Erick Rodrigo
 Zarco Muñoz Gabriel 
 Semestre 2021-2
 Grupo de lab: 07
-Grupo de teoría: 03
+Grupo de teoría: 05
 */
 
 //para cargar imagen
