@@ -354,9 +354,9 @@ int main()
 	//____________________________________________________TERMINA INSTANCIAS DE MODELOS
 
 	//__________________________________________________________SKYBOX
-	std::vector<std::string> skyboxFaces;
-	skyboxFaces.push_back("Textures/Skybox/Verde/right.tga");
+	std::vector<std::string> skyboxFaces;	
 	skyboxFaces.push_back("Textures/Skybox/Verde/left.tga");
+	skyboxFaces.push_back("Textures/Skybox/Verde/right.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/down.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/up.tga");
 	skyboxFaces.push_back("Textures/Skybox/Verde/back.tga");
@@ -432,7 +432,7 @@ int main()
 	*/
 
 	//Sonido de fondo
-	PlaySound("Sounds/Aves.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+	//PlaySound("Sounds/Aves.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
 
 
 	////Loop mientras no se cierra la ventana
@@ -1045,13 +1045,14 @@ int main()
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -5.5f));
 			model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
+			model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Banio.RenderModel();
 
 			//Cargando la taquilla
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(-225.0f, 0.0f, -5.5f));
-			model = glm::scale(model, glm::vec3(0.75f, 0.75f, 0.75f));
+			model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
 			model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Taquilla.RenderModel();
@@ -1060,6 +1061,7 @@ int main()
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(- 180.0f, 0.0f, -5.5f));
 			model = glm::scale(model, glm::vec3(1.3f, 1.3f, 1.3f));
+			model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Souv.RenderModel();
 		}
