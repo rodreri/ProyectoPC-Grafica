@@ -1041,13 +1041,30 @@ int main()
 
 		//Taquilla, baños y Souvenirs
 		{
-			//Cargando el baño
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -5.5f));
-			model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
-			model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Banio.RenderModel();
+			//Cargando los baños
+			{
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -5.5f));
+				model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
+				model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Banio.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -5.5f));
+				model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
+				model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Banio.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-210.0f, 0.0f, -5.5f));
+				model = glm::scale(model, glm::vec3(60.0f, 60.0f, 60.0f));
+				model = glm::rotate(model, 180 * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Banio.RenderModel();
+			}
+			
 
 			//Cargando la taquilla
 			model = glm::mat4(1.0);
@@ -1080,12 +1097,103 @@ int main()
 
 		//Zona de comida
 		{
-			//Cargando la Mesa
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(65.0f, 0.0f, -5.5f));
-			model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Mesa.RenderModel();
+			//Cargando las Mesas
+			{
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-195.0f, 0.0f, -25.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -25.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -25.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-210.0f, 0.0f, -25.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-215.0f, 0.0f, -25.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+			}
+			{
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-195.0f, 0.0f, -30.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -30.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -30.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-210.0f, 0.0f, -30.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-215.0f, 0.0f, -30.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+			}
+
+			{
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-195.0f, 0.0f, -35.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-200.0f, 0.0f, -35.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-205.0f, 0.0f, -35.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-210.0f, 0.0f, -35.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+
+				model = glm::mat4(1.0);
+				model = glm::translate(model, glm::vec3(-215.0f, 0.0f, -35.0f));
+				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
+				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+				Mesa.RenderModel();
+			}
+
+			
 		}
 
 		//Personas
