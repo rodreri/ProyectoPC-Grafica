@@ -293,6 +293,8 @@ void CreateShaders()
 anima Sol;
 bool noche=false;
 
+anima Huma;
+anima Human;
 
 
 int main()
@@ -445,6 +447,38 @@ int main()
 	Sol.KeyFrame[4].X = 0.0f;
 	Sol.KeyFrame[4].Y = 0.0f;
 
+	//--------------------------
+	Huma.KeyFrame[0].X = 0.0f;
+	Huma.KeyFrame[0].Y = 0.0f;
+
+	Huma.KeyFrame[1].X = 25.0f;
+	Huma.KeyFrame[1].Y = 20.0f;
+
+	Huma.KeyFrame[2].X = 35.0f;
+	Huma.KeyFrame[2].Y = 30.0f;
+
+	Huma.KeyFrame[2].X = 45.0f;
+	Huma.KeyFrame[2].Y = 40.0f;
+
+	Huma.KeyFrame[4].X = 55.0f;
+	Huma.KeyFrame[4].Y = 50.0f;
+	Huma.KeyFrame[4].GY = 180.0f;
+	//---------------------------------
+	Human.KeyFrame[0].Z = 0.0f;
+	Human.KeyFrame[0].Y = 0.0f;
+
+	Human.KeyFrame[1].Z = -7.0f;
+	Human.KeyFrame[1].Y = 5.0f;
+
+	Human.KeyFrame[2].Z = -12.0f;
+	Human.KeyFrame[2].Y = 10.0f;
+
+	Human.KeyFrame[2].Z = -17.0f;
+	Human.KeyFrame[2].Y = 15.0f;
+
+	Human.KeyFrame[4].Z = -22.0f;
+	Human.KeyFrame[4].Y = 20.0f;
+	
 
 	/************NOTA
 		UNA VEZ TERMINADA LA ANIMACION SE REGRESA AL PUNTO INICIAL
@@ -530,6 +564,16 @@ int main()
 
 		//________________________________________________A PARTIR DE AQUI CARGO MODELOS
 
+		//KEYFRAMES QUE GENERAdos
+		Huma.setMaxIndex(5);
+		//iniciamos animacion
+		Huma.animacion();
+
+		//KEYFRAMES QUE GENERAdos
+		Human.setMaxIndex(5);
+		//iniciamos animacion
+		Human.animacion();
+
 		//Cargando las piramides
 		{
 			//Cargando Piramide del SOL
@@ -539,12 +583,30 @@ int main()
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Piramide.RenderModel();
 
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(95.0f+Huma.X, 0.0f+Huma.Y, -15.0f));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			model = glm::rotate(model, 90 * toRadians, glm::vec3(0.0f, 1.0f+Huma.GY, 0.0f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
+
+
+
+
+
 			//Cargando Piramide de la LUNA
 			model = glm::mat4(1.0);
 			model = glm::translate(model, glm::vec3(0.0f, 0.0f, -200.0f));
 			model = glm::scale(model, glm::vec3(11.0f, 11.0f, 11.0f));
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Piramide.RenderModel();
+			//Cargando el humano
+			model = glm::mat4(1.0);
+			model = glm::translate(model, glm::vec3(0.0f, 0.0f+Human.Y, -180.0f+Human.Z));
+			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+			Humano.RenderModel();
 		}
 
 		////Vegetacion borde
@@ -1971,12 +2033,8 @@ int main()
 
 		//	}
 
-
-		//}
-
+		//}		
 		
-		
-
 		//Taquilla, baños y Souvenirs
 		{
 			//Cargando los baños
@@ -2156,9 +2214,7 @@ int main()
 				model = glm::scale(model, glm::vec3(1.25f, 1.25f, 1.25f));
 				glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 				Mesa.RenderModel();
-			}
-
-			
+			}			
 		}
 
 
@@ -2171,241 +2227,15 @@ int main()
 			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 			Humano.RenderModel();
 
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -5.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -5.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -5.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -5.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -5.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -6.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -6.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -6.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -6.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -6.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -6.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -7.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -7.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -7.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -7.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -7.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -7.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -8.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -8.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -8.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -8.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -8.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -8.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-			//;lllllllllllllllllllllllllllllllllllllllllllllll
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -9.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -9.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -9.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -9.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -9.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -9.5f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(51.0f, 0.0f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(48.0f, 0.0f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
-
-			//Cargando el humano
-			model = glm::mat4(1.0);
-			model = glm::translate(model, glm::vec3(45.0f, 0.0f, -10.0f));
-			model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
-			glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-			Humano.RenderModel();
+			
 		}
 		
-		
 
-		
-		
 		//KEYFRAMES QUE GENERAdos
 		Sol.setMaxIndex(5);
 
 		//iniciamos animacion
 		Sol.animacion();
-
 
 		//Sol
 		model = glm::mat4(1.0);
