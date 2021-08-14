@@ -480,7 +480,7 @@ int main()
 	*/
 
 	//Sonido de fondo
-	//PlaySound("Sounds/Aves.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
+	PlaySound("Sounds/Aves.wav", NULL, SND_ASYNC | SND_FILENAME | SND_LOOP);
 
 
 	////Loop mientras no se cierra la ventana
